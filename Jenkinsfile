@@ -16,7 +16,7 @@ pipeline {
 		
 	    stage('ssh in machine'){
                steps {
-                   sh ' sshpass -p "admin" ssh admin@100.24.120.210 '
+                   sh ' ssh admin@100.24.120.210 '
                }
            }
 
