@@ -4,8 +4,13 @@ pipeline {
 /*	
 	tools {
         maven "maven3"
+    } 
+*/
+	environment {
+        passwd = "admin"
     }
-*/	
+	
+	
 	stages{
 
 	    stage('pwd'){
@@ -16,7 +21,7 @@ pipeline {
 		
 	    stage('ssh in machine'){
                steps {
-                   sh ' sudo sshpass -p "admin" ssh admin@100.24.120.210 '
+                   sh ' sudo sshpass -p "${env.passwd}" ssh admin@100.24.120.210 '
                }
            }
 
