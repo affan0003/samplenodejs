@@ -21,7 +21,7 @@ pipeline {
 		
 	    stage('ssh in machine'){
                steps {
-                   sh ' sudo sshpass -p "${env.passwd}" ssh admin@100.24.120.210 '
+                   sh ' sudo sshpass -p ${env.passwd} ssh admin@100.24.120.210 '
                }
            }
 
