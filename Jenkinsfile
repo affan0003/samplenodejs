@@ -7,7 +7,7 @@ pipeline {
     } 
 */
 	environment {
-        passwd = "admin"
+        passwd = credentials("admin")
     }
 	
 	
@@ -21,7 +21,7 @@ pipeline {
 		
 	    stage('ssh in machine'){
                steps {
-                   sh ' sudo sshpass -p $passwd ssh admin@100.24.120.210 '
+		       sh("sudo sshpass -p ${passwd} ssh admin@100.24.120.210")
                }
            }
 
