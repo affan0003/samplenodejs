@@ -16,7 +16,7 @@ pipeline {
 		
 	    stage('ssh in machine'){
                steps {
-                   sh ' ssh admin@100.24.120.210 '
+                   sh 'sudo ssh admin@100.24.120.210 '
                }
            }
 
